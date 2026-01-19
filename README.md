@@ -30,6 +30,6 @@ ERROR: \[Updatemem 57-153] Failed to update the BRAM INIT strings for C:/Repos/p
 
 
 
-\# nützlich: 
+# nützlich: 
 
 * in der Suchleiste oben -> Open Log File -> öffnet Vivado Log -> besser nachvollziehbar was passiert
