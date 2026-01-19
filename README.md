@@ -1,8 +1,6 @@
-C Code in Vitis schreiben -> Build -> dann dies hier in Vivado ->
+C Code in Vitis schreiben -> Build -> dann .elf tauschen -> program device
 
-
-
-\# .elf-Datei austauschen
+# .elf-Datei austauschen
 
 ```bash
 
@@ -20,7 +18,7 @@ exec updatemem -force -meminfo $mmi -data $elf -bit $bit -proc design\_1\_i/Micr
 
 
 
-\# learnings:
+# learnings:
 - in der .mmi Datei wird unter anderem der Addressraum für den Speicher auf dem Mikroprozessor angegeben : z.B. MCS\_U0\_dlmb\_cntlr" Begin="0" End="131071"
 - interessant bei Fehler :
 
