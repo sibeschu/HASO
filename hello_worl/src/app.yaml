@@ -1,0 +1,4 @@
+domain_path: C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I
+app_src_dir: C:\Xilinx\2025.1\Vitis\data\embeddedsw\lib\sw_apps\hello_world
+template: hello_world
+lang: c

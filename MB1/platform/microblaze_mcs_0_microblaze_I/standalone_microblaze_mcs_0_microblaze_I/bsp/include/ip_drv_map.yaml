@@ -1,0 +1,6 @@
+microblaze_mcs_0_dlmb_cntlr:
+- lmb_bram_if_cntlr
+- bram
+microblaze_mcs_0_iomodule_0:
+- iomodule
+- iomodule

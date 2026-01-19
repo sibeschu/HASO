@@ -1,0 +1,5 @@
+Microblaze_MCS_microblaze_I:
+    ip_name: microblaze
+    supported_os:
+    - standalone
+    - freertos

@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# updatemem v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Jan  6 12:41:40 2026
+# Process ID         : 11100
+# Current directory  : c:/Repos/projects/NexysA7/HASO
+# Command line       : updatemem.exe -mode batch -source C:/Xilinx/2025.1/Vivado/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.mmi -data C:/Repos/projects/NexysA7/HASO/hello_world/build/hello_world.elf -proc design_1_i/Microblaze_MCS/inst/microblaze_I -bit C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.bit -out C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.bit -force
+# Log file           : c:/Repos/projects/NexysA7/HASO/updatemem.log
+# Journal file       : c:/Repos/projects/NexysA7/HASO\updatemem.jou
+# Running On         : DESKTOP-R1P66H2
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+# CPU Frequency      : 2096 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 6312 MB
+# Swap memory        : 5911 MB
+# Total Virtual      : 12223 MB
+# Available Virtual  : 1870 MB
+#-----------------------------------------------------------
+source C:/Xilinx/2025.1/Vivado/scripts/updatemem/main.tcl -notrace
+Command: update_mem -meminfo C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.mmi -data C:/Repos/projects/NexysA7/HASO/hello_world/build/hello_world.elf -proc design_1_i/Microblaze_MCS/inst/microblaze_I -bit C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.bit -out C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.bit -force
+Loading bitfile C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream C:/Repos/projects/NexysA7/HASO/MS2.runs/impl_1/design_1_wrapper.bit...
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+update_mem completed successfully
+update_mem: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 594.098 ; gain = 500.949
+INFO: [Common 17-206] Exiting updatemem at Tue Jan  6 12:41:51 2026...

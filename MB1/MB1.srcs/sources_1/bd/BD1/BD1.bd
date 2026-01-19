@@ -1,0 +1,661 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x380D8F8FEFC9E321",
+      "device": "xc7a50ticsg324-1L",
+      "gen_directory": "../../../../MB1.gen/sources_1/bd/BD1",
+      "name": "BD1",
+      "pfm_name": "xilinx:nexys-a7-50t:name:0.0",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Main_0": "",
+      "microblaze_mcs_0": "",
+      "proc_sys_reset_0": "",
+      "ilvector_logic_0": "",
+      "sSegDisplay_0": "",
+      "ilconcat_0": "",
+      "ilvector_logic_1": "",
+      "ilvector_logic_2": "",
+      "ilvector_logic_3": "",
+      "ilslice_0": ""
+    },
+    "ports": {
+      "CLK100MHZ": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "BD1_CLK100MHZ",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        },
+        "pfm_attributes": {
+          "CLOCK": "CLK100MHZ {id \"0\" is_default \"true\" proc_sys_reset \"/proc_sys_reset_0\" status \"fixed\" freq_hz \"100000000\"}"
+        }
+      },
+      "CPU_RESETN": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "LED16_B": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "LED16_R": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "LED16_G": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "LED": {
+        "direction": "O",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "SW": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "SEG": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "AN": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "BTNC": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "Main_0": {
+        "vlnv": "xilinx.com:module_ref:Main:1.0",
+        "ip_revision": "1",
+        "xci_name": "BD1_Main_0_0",
+        "xci_path": "ip\\BD1_Main_0_0\\BD1_Main_0_0.xci",
+        "inst_hier_path": "Main_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Main",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "SW": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "CLK100MHZ": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "BD1_CLK100MHZ",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "CPU_RESETN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "BTNC": {
+            "direction": "I"
+          },
+          "LED": {
+            "direction": "O",
+            "left": "15",
+            "right": "0",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "LED16_B": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "LED16_R": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "LED16_G": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "microblaze_mcs_0": {
+        "vlnv": "xilinx.com:ip:microblaze_mcs:3.0",
+        "ip_revision": "26",
+        "xci_name": "BD1_microblaze_mcs_0_0",
+        "xci_path": "ip\\BD1_microblaze_mcs_0_0\\BD1_microblaze_mcs_0_0.xci",
+        "inst_hier_path": "microblaze_mcs_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLK_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "GPIO1_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "GPIO2_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "GPIO3_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "GPIO4_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "GPO3_SIZE": {
+            "value": "32"
+          },
+          "GPO4_SIZE": {
+            "value": "32"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        },
+        "interface_ports": {
+          "GPIO1": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI1_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI1_SIZE": {
+                "value": "16"
+              },
+              "C_GPO1_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO1_SIZE": {
+                "value": "32"
+              },
+              "C_USE_GPI1": {
+                "value": "1"
+              },
+              "C_USE_GPO1": {
+                "value": "0"
+              }
+            }
+          },
+          "GPIO2": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI2_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI2_SIZE": {
+                "value": "32"
+              },
+              "C_GPO2_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO2_SIZE": {
+                "value": "16"
+              },
+              "C_USE_GPI2": {
+                "value": "0"
+              },
+              "C_USE_GPO2": {
+                "value": "1"
+              }
+            }
+          },
+          "GPIO3": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI3_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI3_SIZE": {
+                "value": "32"
+              },
+              "C_GPO3_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO3_SIZE": {
+                "value": "32"
+              },
+              "C_USE_GPI3": {
+                "value": "0"
+              },
+              "C_USE_GPO3": {
+                "value": "1"
+              }
+            }
+          },
+          "GPIO4": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI4_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI4_SIZE": {
+                "value": "32"
+              },
+              "C_GPO4_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO4_SIZE": {
+                "value": "32"
+              },
+              "C_USE_GPI4": {
+                "value": "0"
+              },
+              "C_USE_GPO4": {
+                "value": "1"
+              }
+            }
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "17",
+        "xci_name": "BD1_proc_sys_reset_0_0",
+        "xci_path": "ip\\BD1_proc_sys_reset_0_0\\BD1_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "ilvector_logic_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "16"
+          }
+        }
+      },
+      "sSegDisplay_0": {
+        "vlnv": "xilinx.com:module_ref:sSegDisplay:1.0",
+        "ip_revision": "1",
+        "xci_name": "BD1_sSegDisplay_0_0",
+        "xci_path": "ip\\BD1_sSegDisplay_0_0\\BD1_sSegDisplay_0_0.xci",
+        "inst_hier_path": "sSegDisplay_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sSegDisplay",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ck": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "BD1_CLK100MHZ",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "number": {
+            "direction": "I",
+            "left": "63",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "64",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "seg": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "an": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "ilconcat_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilconcat:1.0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "32",
+            "value_src": "propagated",
+            "value_mode": "auto"
+          },
+          "IN1_WIDTH": {
+            "value": "32",
+            "value_src": "propagated",
+            "value_mode": "auto"
+          }
+        }
+      },
+      "ilvector_logic_1": {
+        "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "ilvector_logic_2": {
+        "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "ilvector_logic_3": {
+        "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "ilslice_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilslice:1.0",
+        "parameters": {
+          "DIN_WIDTH": {
+            "value": "16"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BTNC_0_1": {
+        "ports": [
+          "BTNC",
+          "Main_0/BTNC"
+        ]
+      },
+      "CPU_RESETN_1": {
+        "ports": [
+          "CPU_RESETN",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "Main_0_LED": {
+        "ports": [
+          "Main_0/LED",
+          "ilvector_logic_0/Op2"
+        ]
+      },
+      "Main_0_LED16_B": {
+        "ports": [
+          "Main_0/LED16_B",
+          "ilvector_logic_1/Op1"
+        ]
+      },
+      "Main_0_LED16_G": {
+        "ports": [
+          "Main_0/LED16_G",
+          "ilvector_logic_3/Op1"
+        ]
+      },
+      "Main_0_LED16_R": {
+        "ports": [
+          "Main_0/LED16_R",
+          "ilvector_logic_2/Op1"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "SW",
+          "microblaze_mcs_0/GPIO1_tri_i",
+          "Main_0/SW"
+        ]
+      },
+      "clock_rtl_1": {
+        "ports": [
+          "CLK100MHZ",
+          "microblaze_mcs_0/Clk",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "sSegDisplay_0/ck",
+          "Main_0/CLK100MHZ"
+        ]
+      },
+      "ilconcat_0_dout": {
+        "ports": [
+          "ilconcat_0/dout",
+          "sSegDisplay_0/number"
+        ]
+      },
+      "ilslice_0_Dout": {
+        "ports": [
+          "ilslice_0/Dout",
+          "ilvector_logic_2/Op2",
+          "ilvector_logic_1/Op2",
+          "ilvector_logic_3/Op2"
+        ]
+      },
+      "ilvector_logic_0_Res": {
+        "ports": [
+          "ilvector_logic_0/Res",
+          "LED"
+        ]
+      },
+      "ilvector_logic_1_Res": {
+        "ports": [
+          "ilvector_logic_1/Res",
+          "LED16_R"
+        ]
+      },
+      "ilvector_logic_2_Res": {
+        "ports": [
+          "ilvector_logic_2/Res",
+          "LED16_G"
+        ]
+      },
+      "ilvector_logic_3_Res": {
+        "ports": [
+          "ilvector_logic_3/Res",
+          "LED16_B"
+        ]
+      },
+      "microblaze_mcs_0_GPIO2_tri_o": {
+        "ports": [
+          "microblaze_mcs_0/GPIO2_tri_o",
+          "ilvector_logic_0/Op1",
+          "ilslice_0/Din"
+        ]
+      },
+      "microblaze_mcs_0_GPIO3_tri_o": {
+        "ports": [
+          "microblaze_mcs_0/GPIO3_tri_o",
+          "ilconcat_0/In0"
+        ]
+      },
+      "microblaze_mcs_0_GPIO4_tri_o": {
+        "ports": [
+          "microblaze_mcs_0/GPIO4_tri_o",
+          "ilconcat_0/In1"
+        ]
+      },
+      "proc_sys_reset_0_interconnect_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/interconnect_aresetn",
+          "microblaze_mcs_0/Reset",
+          "Main_0/CPU_RESETN"
+        ]
+      },
+      "sSegDisplay_0_an": {
+        "ports": [
+          "sSegDisplay_0/an",
+          "AN"
+        ]
+      },
+      "sSegDisplay_0_seg": {
+        "ports": [
+          "sSegDisplay_0/seg",
+          "SEG"
+        ]
+      }
+    },
+    "elf_association": {
+      "file": {
+        "name": "..\\..\\..\\..\\..\\..\\MB1\\peripheral_tests\\build\\peripheral_tests.elf",
+        "type": "ELF",
+        "checksum": "485910733",
+        "IsVisible": "1",
+        "ScopedToRef": "BD1",
+        "ScopedToCell": [
+          "microblaze_mcs_0/inst/microblaze_I"
+        ],
+        "UsedIn": [
+          "implementation"
+        ]
+      }
+    }
+  }
+}

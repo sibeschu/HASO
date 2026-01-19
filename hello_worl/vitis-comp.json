@@ -1,0 +1,17 @@
+{
+  "name": "hello_worl",
+  "type": "HOST",
+  "platform": "Morse_Platform",
+  "domain": "standalone_Microblaze_MCS_microblaze_I",
+  "cpuInstance": "Microblaze_MCS_microblaze_I",
+  "cpuType": "microblaze",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_Microblaze_MCS_microblaze_I",
+  "useSysrootToolchain": false,
+  "applicationFlow": "EMBEDDED_ACCEL",
+  "template": "hello_world"
+}

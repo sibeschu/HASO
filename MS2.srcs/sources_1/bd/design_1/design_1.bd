@@ -1,0 +1,524 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6FDB15B78560607C",
+      "device": "xc7a50ticsg324-1L",
+      "gen_directory": "../../../../MS2.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "pfm_name": "xilinx:nexys-a7-50t:haso-platform:0.0",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Microblaze_MCS": "",
+      "Loopback_phys": "",
+      "Concat_Rx": "",
+      "Slicer_StartTx": "",
+      "Slicer_ASCII": "",
+      "proc_sys_reset_0": ""
+    },
+    "ports": {
+      "CPU_RESETN": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "RxD": {
+        "direction": "I"
+      },
+      "TxD": {
+        "direction": "O"
+      },
+      "BTNC": {
+        "direction": "I"
+      },
+      "Buzzer_p": {
+        "direction": "O"
+      },
+      "Buzzer_n": {
+        "direction": "O"
+      },
+      "LED": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "seg": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "an": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "SW": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "Morse_SW": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "UART_TXD_IN": {
+        "direction": "I"
+      },
+      "UART_RXD_OUT": {
+        "direction": "O"
+      },
+      "CLK100MHZ": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        },
+        "pfm_attributes": {
+          "CLOCK": "clk_100MHz {id \"2\" is_default \"true\" proc_sys_reset \"/proc_sys_reset_0\" status \"fixed\" freq_hz \"100000000\"}"
+        }
+      }
+    },
+    "components": {
+      "Microblaze_MCS": {
+        "vlnv": "xilinx.com:ip:microblaze_mcs:3.0",
+        "ip_revision": "26",
+        "xci_name": "design_1_microblaze_mcs_0_0",
+        "xci_path": "ip\\design_1_microblaze_mcs_0_0\\design_1_microblaze_mcs_0_0.xci",
+        "inst_hier_path": "Microblaze_MCS",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "GPI1_SIZE": {
+            "value": "10"
+          },
+          "GPO2_SIZE": {
+            "value": "9"
+          },
+          "MEMSIZE": {
+            "value": "131072"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "UART_BAUDRATE": {
+            "value": "115200"
+          },
+          "UART_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_GPI1": {
+            "value": "1"
+          },
+          "USE_GPI2": {
+            "value": "0"
+          },
+          "USE_GPO1": {
+            "value": "0"
+          },
+          "USE_GPO2": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "UART": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+            "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+          },
+          "GPIO1": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI1_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI1_SIZE": {
+                "value": "10"
+              },
+              "C_GPO1_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO1_SIZE": {
+                "value": "32"
+              },
+              "C_USE_GPI1": {
+                "value": "1"
+              },
+              "C_USE_GPO1": {
+                "value": "0"
+              }
+            }
+          },
+          "GPIO2": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI2_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI2_SIZE": {
+                "value": "32"
+              },
+              "C_GPO2_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO2_SIZE": {
+                "value": "9"
+              },
+              "C_USE_GPI2": {
+                "value": "0"
+              },
+              "C_USE_GPO2": {
+                "value": "1"
+              }
+            }
+          }
+        }
+      },
+      "Loopback_phys": {
+        "vlnv": "xilinx.com:module_ref:Loopback_phys:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_Loopback_phys_0_1",
+        "xci_path": "ip\\design_1_Loopback_phys_0_1\\design_1_Loopback_phys_0_1.xci",
+        "inst_hier_path": "Loopback_phys",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Loopback_phys",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CPU_RESETN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "CLK100MHZ": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_100MHz",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "SW": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "BTNC": {
+            "direction": "I"
+          },
+          "LED": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "Morse_SW": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "seg": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "an": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "TxD": {
+            "direction": "O"
+          },
+          "RxD": {
+            "direction": "I"
+          },
+          "main_StartTx": {
+            "direction": "I",
+            "parameters": {
+              "PortWidth": {
+                "value": "1",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "main_NewSymbol": {
+            "direction": "O"
+          },
+          "main_ASCII": {
+            "direction": "I",
+            "left": "7",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "8",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "main_RxASCII": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "main_TxReady": {
+            "direction": "O"
+          },
+          "Buzzer_p": {
+            "direction": "O"
+          },
+          "Buzzer_n": {
+            "direction": "O"
+          }
+        }
+      },
+      "Concat_Rx": {
+        "vlnv": "xilinx.com:inline_hdl:ilconcat:1.0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "8"
+          },
+          "IN1_WIDTH": {
+            "value": "1",
+            "value_src": "propagated",
+            "value_mode": "auto"
+          },
+          "IN2_WIDTH": {
+            "value": "1",
+            "value_src": "propagated",
+            "value_mode": "auto"
+          },
+          "NUM_PORTS": {
+            "value": "3"
+          }
+        }
+      },
+      "Slicer_StartTx": {
+        "vlnv": "xilinx.com:inline_hdl:ilslice:1.0",
+        "parameters": {
+          "DIN_TO": {
+            "value": "8"
+          },
+          "DIN_WIDTH": {
+            "value": "9"
+          }
+        }
+      },
+      "Slicer_ASCII": {
+        "vlnv": "xilinx.com:inline_hdl:ilslice:1.0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "7"
+          },
+          "DIN_WIDTH": {
+            "value": "9"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "17",
+        "xci_name": "design_1_proc_sys_reset_0_0",
+        "xci_path": "ip\\design_1_proc_sys_reset_0_0\\design_1_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BTNC_1": {
+        "ports": [
+          "BTNC",
+          "Loopback_phys/BTNC"
+        ]
+      },
+      "CLK100MHZ_1": {
+        "ports": [
+          "CLK100MHZ",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "Microblaze_MCS/Clk",
+          "Loopback_phys/CLK100MHZ"
+        ]
+      },
+      "CPU_RESETN_1": {
+        "ports": [
+          "CPU_RESETN",
+          "proc_sys_reset_0/ext_reset_in",
+          "Loopback_phys/CPU_RESETN"
+        ]
+      },
+      "Loopback_phys_0_main_NewSymbol": {
+        "ports": [
+          "Loopback_phys/main_NewSymbol",
+          "Concat_Rx/In1"
+        ]
+      },
+      "Loopback_phys_Buzzer_n": {
+        "ports": [
+          "Loopback_phys/Buzzer_n",
+          "Buzzer_n"
+        ]
+      },
+      "Loopback_phys_Buzzer_p": {
+        "ports": [
+          "Loopback_phys/Buzzer_p",
+          "Buzzer_p"
+        ]
+      },
+      "Loopback_phys_LED": {
+        "ports": [
+          "Loopback_phys/LED",
+          "LED"
+        ]
+      },
+      "Loopback_phys_TxD": {
+        "ports": [
+          "Loopback_phys/TxD",
+          "TxD"
+        ]
+      },
+      "Loopback_phys_an": {
+        "ports": [
+          "Loopback_phys/an",
+          "an"
+        ]
+      },
+      "Loopback_phys_main_RxASCII": {
+        "ports": [
+          "Loopback_phys/main_RxASCII",
+          "Concat_Rx/In0"
+        ]
+      },
+      "Loopback_phys_main_TxReady": {
+        "ports": [
+          "Loopback_phys/main_TxReady",
+          "Concat_Rx/In2"
+        ]
+      },
+      "Loopback_phys_seg": {
+        "ports": [
+          "Loopback_phys/seg",
+          "seg"
+        ]
+      },
+      "Microblaze_MCS_UART_txd": {
+        "ports": [
+          "Microblaze_MCS/UART_txd",
+          "UART_RXD_OUT"
+        ]
+      },
+      "Morse_SW_1": {
+        "ports": [
+          "Morse_SW",
+          "Loopback_phys/Morse_SW"
+        ]
+      },
+      "RxD_1": {
+        "ports": [
+          "RxD",
+          "Loopback_phys/RxD"
+        ]
+      },
+      "SW_1": {
+        "ports": [
+          "SW",
+          "Loopback_phys/SW"
+        ]
+      },
+      "Slicer_ASCII_Dout": {
+        "ports": [
+          "Slicer_ASCII/Dout",
+          "Loopback_phys/main_ASCII"
+        ]
+      },
+      "Slicer_StartTx_Dout": {
+        "ports": [
+          "Slicer_StartTx/Dout",
+          "Loopback_phys/main_StartTx"
+        ]
+      },
+      "UART_TXD_IN_1": {
+        "ports": [
+          "UART_TXD_IN",
+          "Microblaze_MCS/UART_rxd"
+        ]
+      },
+      "ilconcat_0_dout": {
+        "ports": [
+          "Concat_Rx/dout",
+          "Microblaze_MCS/GPIO1_tri_i"
+        ]
+      },
+      "microblaze_mcs_0_GPIO2_tri_o": {
+        "ports": [
+          "Microblaze_MCS/GPIO2_tri_o",
+          "Slicer_StartTx/Din",
+          "Slicer_ASCII/Din"
+        ]
+      },
+      "proc_sys_reset_0_mb_reset": {
+        "ports": [
+          "proc_sys_reset_0/mb_reset",
+          "Microblaze_MCS/Reset"
+        ]
+      }
+    }
+  }
+}
