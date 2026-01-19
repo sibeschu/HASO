@@ -1,6 +1,15 @@
 /* 
-PC -> FPGA - UART_RX 
-FPGA -> PC - UART_TX 
+a & 0x01 liest bit 0
+a & 0xFF liest untere 8 bit
+a | (1u << 9); setzt bit 9 auf 1 
+~a bitweise NOT invertiert alle bits
+a ^ b bits togglen mit XOR
+1u << n links shift verschiebt eine 1 um n stellen nach links
+a >> n schiebt nach rechts
+(GPI >> 9) & 1u liest bit 9
+
+poll rx_ascii -> output to uart_tx
+poll uart_rx -> send_led 
 */ 
 
 #include <stdio.h>
@@ -19,7 +28,7 @@ FPGA -> PC - UART_TX
 #define START_TX_BIT 9 // GPO
 /* ASCII & RX_ASCII are the lowest 8 bit of GPO and GPI */
 
-bool have_new_symbol(void) {
+bool has_new_symbol(void) {
   return ((GPI >> NEW_SYMBOL_BIT) & 1u) != 0;
 }
 
@@ -42,11 +51,9 @@ void send_led(u8 c) {
   pulse_start_tx();
 }
 
-u8 rx_ascii(void) {
+u8 get_rx_ascii(void) {
   return (u8)(GPI & 0xFFu);
 }
-
-
 
 bool uart_tx_busy() 
 { 
@@ -60,12 +67,12 @@ bool uart_rx_has_valid_data()
 
 void uart_putc(u8 letter) {
   while (uart_tx_busy()) {}
-  UART_TX = (u32)letter;
+  UART_TX = (u8)letter;
 }
 
 u8 uart_getc(void) {
   while (!uart_rx_has_valid_data()) {}
-  return (u8)UART_RX;
+  return (u8)(UART_RX & 0xFF);
 }
 
 
@@ -76,16 +83,17 @@ int main()
     print("Starting program..\n\r");
 
   while (1) {
-    // photodiode -> PC
-    if (have_new_symbol()) {
-        uart_putc(rx_ascii());
+    print("doing while loop");
+    // when fpga gets data from loopback -> output to uart_tx
+    if (has_new_symbol()) {
+      uart_putc(get_rx_ascii());
     }
 
-    // PC -> LED
+    // when microblaze receives data on rx from pc -> write to led
     if (uart_rx_has_valid_data()) {
-        u8 c = (u8)UART_RX;
-        send_led(c);
-    }
+        print("uart_rx has valid data");
+        send_led(uart_getc());
+            }
 
     cleanup_platform();
     return 0;
