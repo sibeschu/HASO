@@ -46,7 +46,7 @@ void uart_write(u8 c) {
 }
 
 u8 uart_read(void) {
-    return (u8)(UART_RX & 0xFF);
+    return (u32)(UART_RX & 0xFF);
 }
 
 /* Loopback Tx und Loopback Rx */ 
@@ -58,28 +58,14 @@ bool is_tx_ready(void) {
     return ((GPI >> TX_READY_BIT) & 0x01) != 0;
 }
 
-// void pulse_start_tx(void) {
-//     GPO |= (0x01 << START_TX_BIT);
-//     for(int i = 0; i<=1000000; ++i) {} //usleep(5);
-//     GPO &= ~(0x01 << START_TX_BIT);
-// }
-
-// void set_led_ascii(u8 c) {
-//     GPO = ((GPO & ~0xFFu) | (u8)c);
-// }
-
 void send_ascii(u8 c) {
     while (!is_tx_ready()) {}
-
-    // set ascii register
-    GPO = ((GPO & ~0xFFu) | (u8)c);
-
-    // pulse start_tx
-    GPO |= (0x01 << START_TX_BIT);
+    // set ascii register & pulse start tx
+    GPO = c | (0x01 << START_TX_BIT);
     usleep(5);
-    GPO &= ~(0x01 << START_TX_BIT);
+    GPO = c;
 }
 
 u8 get_rx_ascii(void) {
-    return (u8)(GPI & 0xFFu);
+    return (u8)(GPI & 0xFF);
 }

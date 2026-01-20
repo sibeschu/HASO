@@ -42,6 +42,7 @@ architecture rtl of Loopback_phys is
 
     -- transmitter
     signal tx_ascii : std_logic_vector(7 downto 0) := (others => '0');
+    signal tx_ascii2 : std_logic_vector(7 downto 0) := (others => '0');
     signal tx_start : std_logic := '0';
     signal tx_ready : std_logic := '0';
     signal tx_led   : std_logic := '0';
@@ -139,11 +140,11 @@ begin
             CPU_RESETN => CPU_RESETN,
             CLK1MHZ    => clk1mhz,
             ASCII      => main_ASCII,
-            LED        => TxD,
+            LED        => tx_led,
             Ready      => main_TxReady,
             StartTx    => main_StartTx
         );
-
+    TxD <= tx_led;
     --------------------------------------------------------------------
     -- Morse receiver (RxD -> ASCII)
     --------------------------------------------------------------------
@@ -154,11 +155,11 @@ begin
         port map (
             CPU_RESETN    => CPU_RESETN,
             CLK1MHZ       => clk1mhz,
-            PhotoDiode    => RxD,
-            Output_Symbol => main_RxASCII,
+            PhotoDiode    => tx_led, -- loopback sonst RxD
+            Output_Symbol => tx_ascii2,
             NewSymbol     => main_NewSymbol
         );
-
+    main_RxASCII <= tx_ascii2;
     --------------------------------------------------------------------
     -- BTNC sync/edge detect in clk1mhz domain
     --------------------------------------------------------------------
@@ -219,23 +220,23 @@ begin
     --------------------------------------------------------------------
     -- Save last sent / last received bytes (for display)
     --------------------------------------------------------------------
-    process(clk1mhz)
-    begin
-        if rising_edge(clk1mhz) then
-            if CPU_RESETN = '0' then
-                last_tx <= (others => '0');
-                last_rx <= (others => '0');
-            else
-                if tx_start = '1' then
-                    last_tx <= tx_ascii;
-                end if;
+--    process(clk1mhz)
+--    begin
+--        if rising_edge(clk1mhz) then
+--            if CPU_RESETN = '0' then
+--                last_tx <= (others => '0');
+--                last_rx <= (others => '0');
+--            else
+--                if tx_start = '1' then
+--                    last_tx <= tx_ascii;
+--                end if;
 
-                if rx_new = '1' then
-                    last_rx <= rx_ascii;
-                end if;
-            end if;
-        end if;
-    end process;
+--                if rx_new = '1' then
+--                    last_rx <= rx_ascii;
+--                end if;
+--            end if;
+--        end if;
+--    end process;
 
     --------------------------------------------------------------------
     -- 7-seg content:
@@ -244,14 +245,14 @@ begin
     -- Middle: one digit shows RX level via DP (debug)
     --------------------------------------------------------------------
     disp_number <=
-        hex_to_7seg(last_tx(7 downto 4)) &  -- Digit7 (AN7)
-        hex_to_7seg(last_tx(3 downto 0)) &  -- Digit6 (AN6)
+        hex_to_7seg(main_ASCII(7 downto 4)) &  -- Digit7 (AN7)
+        hex_to_7seg(main_ASCII(3 downto 0)) &  -- Digit6 (AN6)
         SEG_BLANK &                         -- Digit5 (AN5)
         rx_dp_digit &                       -- Digit4 (AN4)
         SEG_BLANK &                         -- Digit3 (AN3)
         SEG_BLANK &                         -- Digit2 (AN2)
-        hex_to_7seg(last_rx(7 downto 4)) &  -- Digit1 (AN1)
-        hex_to_7seg(last_rx(3 downto 0));   -- Digit0 (AN0)
+        hex_to_7seg(tx_ascii2(7 downto 4)) &  -- Digit1 (AN1)
+        hex_to_7seg(tx_ascii2(3 downto 0));   -- Digit0 (AN0)
 
     U_SSEG: entity work.sSegDisplay
         port map (
