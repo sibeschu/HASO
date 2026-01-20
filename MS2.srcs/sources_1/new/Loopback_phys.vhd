@@ -139,7 +139,7 @@ begin
             CPU_RESETN => CPU_RESETN,
             CLK1MHZ    => clk1mhz,
             ASCII      => main_ASCII,
-            LED        => tx_led,
+            LED        => TxD,
             Ready      => main_TxReady,
             StartTx    => main_StartTx
         );
@@ -158,11 +158,6 @@ begin
             Output_Symbol => main_RxASCII,
             NewSymbol     => main_NewSymbol
         );
-
-    --------------------------------------------------------------------
-    -- External pins
-    --------------------------------------------------------------------
-    TxD <= tx_led;
 
     --------------------------------------------------------------------
     -- BTNC sync/edge detect in clk1mhz domain

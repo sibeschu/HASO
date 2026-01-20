@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "stdbool.h"
 #include "platform.h"
 #include "xil_printf.h"
 #include "fpga.h"
@@ -14,13 +13,13 @@ int main()
     // when fpga gets data from loopback -> output to uart_tx
     if (has_new_symbol()) {
       for(int i = 0; i<10000000; ++i) {}
-      uart_putc(get_rx_ascii());
+      uart_write(get_rx_ascii());
     }
 
     // when microblaze receives data on rx from pc -> write to led
     if (uart_rx_has_valid_data()) {
-      print("uart_rx has valid data\r\n");
-      send_led(uart_getc());
+      xil_printf("uart_rx has valid data: %c\r\n", uart_read());
+      send_ascii(uart_read());
     }
   }
   cleanup_platform();

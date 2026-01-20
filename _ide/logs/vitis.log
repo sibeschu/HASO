@@ -1416,3 +1416,124 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 17:58:15 INFO  : C:\Xilinx\2025.1\Vivado\gnu\microblaze\nt\bin\mb-gcc-ar.exe. Clearing build directory.
 17:58:15 INFO  : Successfully retargeted Application c:\Repos\projects\NexysA7\HASO\Morse_App\src
 17:58:15 INFO  : cmd.exe, /C, empyro.bat build_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+18:05:26 INFO  : BSP build will be initiated for Domain standalone_Microblaze_MCS_microblaze_I
+18:05:26 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+18:05:26 INFO  : lopper command to reconfigure BSP :empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+18:05:26 INFO  : cmd.exe, /C, empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+18:05:32 INFO  : Domain reconfigured successfully
+18:05:32 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+18:05:32 INFO  : lopper command to build BSP :empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+18:05:32 INFO  : cmd.exe, /C, empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+18:05:36 INFO  : Domain build successfully
+18:05:36 INFO  : Generating Export directory
+18:05:37 INFO  : Platform Build Finished successfully.
+18:05:37 INFO  : lopper command to retarget baremetal application :empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+18:05:37 INFO  : cmd.exe, /C, empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+18:05:38 INFO  : [INFO]: Retargeting app
+18:05:38 INFO  : [INFO]: Updating link libraries based on new domain
+18:05:38 INFO  : [INFO]: Compiler path changed from C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe to C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe
+18:05:38 INFO  : C:\Xilinx\2025.1\Vivado\gnu\microblaze\nt\bin\mb-gcc-ar.exe. Clearing build directory.
+18:05:38 INFO  : Successfully retargeted Application c:\Repos\projects\NexysA7\HASO\Morse_App\src
+18:05:38 INFO  : cmd.exe, /C, empyro.bat build_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+20:31:11 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\b\AppData\Local\Temp\rigel_lopper_b7783834134177805669 -r C:\Repos\projects\NexysA7\HASO\_ide\.wsdata\.repo.yaml
+20:31:11 INFO  : updated workspace path: C:\Repos\projects\NexysA7\HASO
+20:31:11 INFO  : created .gitignore file for the project C:\Repos\projects\NexysA7\HASO
+20:31:15 INFO  : Embedded Template List generated successfully
+20:31:15 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\b\AppData\Local\Temp\rigel_lopper_b5709366684670105933 -r C:\Repos\projects\NexysA7\HASO\_ide\.wsdata\.repo.yaml
+20:31:19 INFO  : Embedded Template List generated successfully
+20:31:27 INFO  : connection terminated
+20:31:27 INFO  : connection terminated
+20:31:27 INFO  : scheduling shutdown timer for 2 seconds ...
+20:31:29 INFO  : Terminating Vitis C++ Server
+20:31:30 INFO  : Vitis C++ Server terminated
+07:27:02 INFO  : updated workspace path: C:\Repos\projects\NexysA7\HASO
+07:27:03 INFO  : created .gitignore file for the project C:\Repos\projects\NexysA7\HASO
+07:27:06 INFO  : [INFO]: Initializing repositories
+07:27:06 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.
+07:27:06 INFO  : Successfully created repository data at C:\Users\b\AppData\Local\Temp\rigel_lopper_b12201022088233915198
+07:27:06 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\b\AppData\Local\Temp\rigel_lopper_b14238916212051715704 -r C:\Users\b\AppData\Local\Temp\rigel_lopper_b12201022088233915198\.repo.yaml
+07:27:14 INFO  : Embedded Template List generated successfully
+07:27:15 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\b\AppData\Local\Temp\rigel_lopper_b14505594712332636766 -r C:\Repos\projects\NexysA7\HASO\_ide\.wsdata\.repo.yaml
+07:27:17 INFO  : Embedded Template List generated successfully
+07:27:17 INFO  : cmd.exe, /C, empyro.bat repo -st  C:\Xilinx\2025.1\Vitis\data\embeddedsw
+07:27:24 INFO  : [INFO]: Initializing repositories
+07:27:24 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.
+07:27:24 INFO  : Successfully created repository data at C:\Users\b\AppData\Local\Temp\rigel_lopper_b1315480338877494802
+07:27:24 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\b\AppData\Local\Temp\rigel_lopper_b13474913294100921033 -r C:\Users\b\AppData\Local\Temp\rigel_lopper_b1315480338877494802\.repo.yaml
+07:27:26 INFO  : Embedded Template List generated successfully
+07:30:12 INFO  : BSP build will be initiated for Domain standalone_Microblaze_MCS_microblaze_I
+07:30:12 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:30:12 INFO  : lopper command to reconfigure BSP :empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:30:12 INFO  : cmd.exe, /C, empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:30:44 INFO  : Domain reconfigured successfully
+07:30:44 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:30:44 INFO  : lopper command to build BSP :empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:30:44 INFO  : cmd.exe, /C, empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:30:54 INFO  : Domain build successfully
+07:30:54 INFO  : Generating Export directory
+07:30:55 INFO  : Platform Build Finished successfully.
+07:30:55 INFO  : lopper command to retarget baremetal application :empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+07:30:55 INFO  : cmd.exe, /C, empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+07:30:57 INFO  : [INFO]: Retargeting app
+07:30:57 INFO  : [INFO]: Updating link libraries based on new domain
+07:30:57 INFO  : [INFO]: Compiler path changed from C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe to C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe
+07:30:57 INFO  : C:\Xilinx\2025.1\Vivado\gnu\microblaze\nt\bin\mb-gcc-ar.exe. Clearing build directory.
+07:30:57 INFO  : Successfully retargeted Application c:\Repos\projects\NexysA7\HASO\Morse_App\src
+07:30:57 INFO  : cmd.exe, /C, empyro.bat build_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+07:37:52 INFO  : BSP build will be initiated for Domain standalone_Microblaze_MCS_microblaze_I
+07:37:52 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:37:52 INFO  : lopper command to reconfigure BSP :empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:37:52 INFO  : cmd.exe, /C, empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:38:07 INFO  : Domain reconfigured successfully
+07:38:07 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:38:07 INFO  : lopper command to build BSP :empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:38:07 INFO  : cmd.exe, /C, empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+07:38:16 INFO  : Domain build successfully
+07:38:16 INFO  : Generating Export directory
+07:38:17 INFO  : Platform Build Finished successfully.
+07:38:17 INFO  : lopper command to retarget baremetal application :empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+07:38:17 INFO  : cmd.exe, /C, empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+07:38:19 INFO  : [INFO]: Retargeting app
+07:38:19 INFO  : [INFO]: Updating link libraries based on new domain
+07:38:19 INFO  : [INFO]: Compiler path changed from C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe to C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe
+07:38:19 INFO  : C:\Xilinx\2025.1\Vivado\gnu\microblaze\nt\bin\mb-gcc-ar.exe. Clearing build directory.
+07:38:19 INFO  : Successfully retargeted Application c:\Repos\projects\NexysA7\HASO\Morse_App\src
+07:38:19 INFO  : cmd.exe, /C, empyro.bat build_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+08:02:31 INFO  : BSP build will be initiated for Domain standalone_Microblaze_MCS_microblaze_I
+08:02:31 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:02:31 INFO  : lopper command to reconfigure BSP :empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:02:31 INFO  : cmd.exe, /C, empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:02:42 INFO  : Domain reconfigured successfully
+08:02:42 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:02:42 INFO  : lopper command to build BSP :empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:02:42 INFO  : cmd.exe, /C, empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:02:45 INFO  : Domain build successfully
+08:02:45 INFO  : Generating Export directory
+08:02:46 INFO  : Platform Build Finished successfully.
+08:02:46 INFO  : lopper command to retarget baremetal application :empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+08:02:46 INFO  : cmd.exe, /C, empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+08:02:47 INFO  : [INFO]: Retargeting app
+08:02:47 INFO  : [INFO]: Updating link libraries based on new domain
+08:02:47 INFO  : [INFO]: Compiler path changed from C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe to C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe
+08:02:47 INFO  : C:\Xilinx\2025.1\Vivado\gnu\microblaze\nt\bin\mb-gcc-ar.exe. Clearing build directory.
+08:02:47 INFO  : Successfully retargeted Application c:\Repos\projects\NexysA7\HASO\Morse_App\src
+08:02:47 INFO  : cmd.exe, /C, empyro.bat build_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+08:19:43 INFO  : BSP build will be initiated for Domain standalone_Microblaze_MCS_microblaze_I
+08:19:43 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:19:43 INFO  : lopper command to reconfigure BSP :empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:19:43 INFO  : cmd.exe, /C, empyro.bat reconfig_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:19:49 INFO  : Domain reconfigured successfully
+08:19:49 INFO  : Generating BSP for the domain C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:19:49 INFO  : lopper command to build BSP :empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:19:49 INFO  : cmd.exe, /C, empyro.bat build_bsp -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\Microblaze_MCS_microblaze_I\standalone_Microblaze_MCS_microblaze_I\bsp
+08:19:53 INFO  : Domain build successfully
+08:19:53 INFO  : Generating Export directory
+08:19:54 INFO  : Platform Build Finished successfully.
+08:19:54 INFO  : lopper command to retarget baremetal application :empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+08:19:54 INFO  : cmd.exe, /C, empyro.bat retarget_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -d C:\Repos\projects\NexysA7\HASO\Morse_Platform\export\Morse_Platform\sw\standalone_Microblaze_MCS_microblaze_I -b c:\Repos\projects\NexysA7\HASO\Morse_App\build
+08:19:55 INFO  : [INFO]: Retargeting app
+08:19:55 INFO  : [INFO]: Updating link libraries based on new domain
+08:19:55 INFO  : [INFO]: Compiler path changed from C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe to C:\Xilinx\2025.1\Vitis\gnu\microblaze\nt\bin\mb-gcc-ar.exe
+08:19:55 INFO  : C:\Xilinx\2025.1\Vivado\gnu\microblaze\nt\bin\mb-gcc-ar.exe. Clearing build directory.
+08:19:55 INFO  : Successfully retargeted Application c:\Repos\projects\NexysA7\HASO\Morse_App\src
+08:19:55 INFO  : cmd.exe, /C, empyro.bat build_app -s c:\Repos\projects\NexysA7\HASO\Morse_App\src -b c:\Repos\projects\NexysA7\HASO\Morse_App\build

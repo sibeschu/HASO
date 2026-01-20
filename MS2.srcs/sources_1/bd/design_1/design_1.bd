@@ -284,13 +284,7 @@
             "direction": "I"
           },
           "main_StartTx": {
-            "direction": "I",
-            "parameters": {
-              "PortWidth": {
-                "value": "1",
-                "value_src": "user_prop"
-              }
-            }
+            "direction": "I"
           },
           "main_NewSymbol": {
             "direction": "O"
@@ -298,13 +292,7 @@
           "main_ASCII": {
             "direction": "I",
             "left": "7",
-            "right": "0",
-            "parameters": {
-              "PortWidth": {
-                "value": "8",
-                "value_src": "user_prop"
-              }
-            }
+            "right": "0"
           },
           "main_RxASCII": {
             "direction": "O",
